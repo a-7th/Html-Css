@@ -1,0 +1,57 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* NAV BAR */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #0b1220;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+/* pseudo element */
+nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #38bdf8;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* layout */
+section {
+  text-align: center;
+  padding: 20px;
+}
+
+/* shadow system */
+table, form {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* buttons */
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}

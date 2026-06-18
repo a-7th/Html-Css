@@ -1,0 +1,116 @@
+:root {
+    --bg-dark: #070709;
+    --text-light: #f3f4f6;
+    --accent-cyan: #bc0000; /* Changed from cyan to deep red */
+    --card-bg: rgba(15, 15, 20, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow: hidden;
+    height: 100vh;
+}
+
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Puts the 3D background behind the text */
+}
+
+.ui-container {
+    position: relative;
+    z-index: 2; /* Forces HTML content on top of 3D canvas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.badge {
+    background: #111;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+}
+
+p {
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #ff007f;
+    color: white;
+    margin-right: 1rem;
+}
+
+.btn-secondary {
+    background-color: var(--accent-cyan);
+    color: var(--bg-dark);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
